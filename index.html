@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SFW Profile Studio – Compliance‑First Profile Makeovers</title>
+  <meta name="description" content="Compliance-first SFW profile creation for models, companions and creators. Photography, copywriting, design and acceptance checks – all UK‑compliant." />
+  <style>
+    :root{
+      --bg:#0b0d12;--panel:#121621;--ink:#e8ecf3;--muted:#a9b3c6;--brand:#6ae7da;--brand2:#9ad1ff;--accent:#ffd166;--ok:#42d38b;--err:#ff6b6b;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:linear-gradient(180deg,#0b0d12, #0f1320);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    a{color:var(--brand)}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;background:rgba(11,13,18,.7);backdrop-filter:saturate(150%) blur(10px);z-index:50;border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.4px}
+    .logo-dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:0 0 12px var(--brand)}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#151a29;color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#071218;border:none}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.18)}
+    .hero{padding:72px 0 36px}
+    .grid{display:grid;gap:24px}
+    @media(min-width:960px){.hero .grid{grid-template-columns:1.1fr .9fr}}
+    .card{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+    h1{font-size:40px;line-height:1.1;margin:0 0 12px}
+    h2{font-size:28px;line-height:1.2;margin:0 0 10px}
+    h3{font-size:20px;margin:0 0 8px}
+    p.lead{color:var(--muted);font-size:18px}
+    .tick{color:var(--ok)}
+    .section{padding:36px 0}
+    .list{display:grid;gap:14px}
+    .list li{list-style:none;display:flex;gap:10px;align-items:flex-start}
+    .badge{display:inline-block;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);font-size:12px;color:var(--muted)}
+    .price{font-size:36px;font-weight:800}
+    .plans{display:grid;gap:24px}
+    @media(min-width:900px){.plans{grid-template-columns:repeat(3,1fr)}}
+    .plan .cta{margin-top:14px}
+    .muted{color:var(--muted)}
+    .inline{display:flex;gap:10px;flex-wrap:wrap}
+    .footer{padding:28px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)}
+    .gallery{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
+    .thumb{aspect-ratio:1/1;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:#0d111a}
+    .thumb img{width:100%;height:100%;object-fit:cover;filter:saturate(105%) contrast(105%)}
+    /* Netlify form success style */
+    .success{display:none;background:#0f1a13;border:1px solid rgba(66,211,139,.35);color:#b6ffda;padding:12px;border-radius:12px;margin-bottom:12px}
+    .show-success .success{display:block}
+    .field{display:flex;flex-direction:column;gap:6px}
+    .input{background:#0e121b;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px;color:var(--ink)}
+  </style>
+  <script>
+    // Simple client-side success message for non-JS form fallbacks Netlify still captures.
+    function handleSubmit(e){
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:new URLSearchParams([...data]).toString()})
+        .then(()=>{form.reset();form.parentElement.classList.add('show-success')})
+        .catch(()=>{alert('Submission failed. Please try again or email us.')});
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo"><span class="logo-dot"></span> SFW Profile Studio</div>
+      <nav class="inline">
+        <a class="btn ghost" href="#services">Services</a>
+        <a class="btn ghost" href="#work">Before/After</a>
+        <a class="btn primary" href="#contact">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container hero">
+    <div class="grid">
+      <section class="card">
+        <span class="badge">Compliance‑first • UK SFW</span>
+        <h1>Profile makeovers that pass checks <span style="color:var(--brand)">and</span> win clients</h1>
+        <p class="lead">We create non‑explicit, high‑end profiles for models, companions and creators. Photography, copy, layout and pre‑moderation—engineered to pass platform rules and UK standards.</p>
+        <div class="inline" style="margin-top:14px">
+          <a class="btn primary" href="#contact">Book a free consult</a>
+          <a class="btn" href="#services">See packages</a>
+        </div>
+        <p class="muted" style="margin-top:10px;font-size:13px">Public site stays SFW. Explicit content (if any) always kept behind platform gating—never on this website.</p>
+      </section>
+      <aside class="card">
+        <h3>Why clients choose us</h3>
+        <ul class="list">
+          <li><span class="tick">✔</span> SFW visuals + copy that look premium</li>
+          <li><span class="tick">✔</span> Platform acceptance checks before upload</li>
+          <li><span class="tick">✔</span> Privacy‑by‑design & brand safety</li>
+          <li><span class="tick">✔</span> Fast turnaround; upgrade‑ready stack</li>
+        </ul>
+      </aside>
+    </div>
+
+    <section id="work" class="section">
+      <h2>Before / After (SFW)</h2>
+      <p class="muted">Examples use neutral, non‑explicit styling. Swap with your own portfolio later.</p>
+      <div class="gallery" style="margin-top:12px">
+        <div class="thumb"><img alt="SFW portrait 1" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop"/></div>
+        <div class="thumb"><img alt="SFW portrait 2" src="https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=800&auto=format&fit=crop"/></div>
+        <div class="thumb"><img alt="SFW portrait 3" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop"/></div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <h2>Services & Packages</h2>
+      <div class="plans">
+        <div class="card plan">
+          <h3>Starter – Free‑Friendly</h3>
+          <p class="price">£0 setup*</p>
+          <ul class="list">
+            <li>• Profile audit & acceptance checklist</li>
+            <li>• SFW copy (bio + 6 captions)</li>
+            <li>• Layout & image order plan</li>
+            <li>• Upload pre‑moderation pass</li>
+          </ul>
+          <p class="muted">*Uses free hosting + free subdomain. You can upgrade anytime.</p>
+          <a class="btn primary cta" href="#contact">Start now</a>
+        </div>
+        <div class="card plan">
+          <h3>Pro – Growth</h3>
+          <p class="price">£—</p>
+          <ul class="list">
+            <li>Everything in Starter</li>
+            <li>+ SFW photo set plan (DIY or pro)</li>
+            <li>+ On‑platform SEO & thumbnails</li>
+            <li>+ Social feeder setup (IG/X)</li>
+          </ul>
+          <a class="btn cta" href="#contact">Request quote</a>
+        </div>
+        <div class="card plan">
+          <h3>Elite – Safety Suite</h3>
+          <p class="price">£—</p>
+          <ul class="list">
+            <li>Everything in Pro</li>
+            <li>+ Privacy playbook & watermark kit</li>
+            <li>+ Review & reputation strategy</li>
+            <li>+ Monthly optimisation</li>
+          </ul>
+          <a class="btn cta" href="#contact">Book consult</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="card">
+        <h2>Get Started (Free Prototype)</h2>
+        <p class="muted">No domain needed. We’ll publish to a free subdomain and wire a working contact form. Upgrade later with your own domain + branded email.</p>
+        <div class="success">Thanks! Your message was sent. We’ll reply shortly.</div>
+        <!-- Netlify form: works when deployed on Netlify. Also works without JS. -->
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)" style="display:grid;gap:12px;max-width:720px">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display:none">
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
+          <div class="field">
+            <label>Full name</label>
+            <input class="input" type="text" name="name" required />
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input class="input" type="email" name="email" required />
+          </div>
+          <div class="field">
+            <label>What do you need?</label>
+            <textarea class="input" rows="5" name="message" placeholder="Tell us about your profile goals (SFW only)." required></textarea>
+          </div>
+          <div class="inline">
+            <button class="btn primary" type="submit">Send message</button>
+            <a class="btn" href="#">Download service one‑pager</a>
+          </div>
+          <p class="muted" style="font-size:12px">By submitting, you agree to our SFW‑only policy. We never publish explicit content here. For privacy: we minimise data and delete inquiries after they’re handled.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div class="inline">
+      <span>© <span id="year"></span> SFW Profile Studio</span>
+      <span>•</span>
+      <a href="#" aria-label="Privacy policy">Privacy</a>
+      <span>•</span>
+      <a href="#" aria-label="Contact">Contact</a>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
